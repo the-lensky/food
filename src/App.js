@@ -7,6 +7,7 @@ import Footer from './components/Footer'
 import Home from './pages/Home'
 import Contact from './pages/Contact'
 import About from './pages/About'
+import Category from './pages/About'
 import NotFound from './pages/NotFound'
 
 
@@ -20,6 +21,7 @@ function App() {
                         <Route path='/' exact component={Home}/>
                         <Route path='/contact' component={Contact}/>
                         <Route path='/about' component={About}/>
+                        <Route path='/category/:name' component={Category}/>
                         <Route component={NotFound}/>
                     </Switch>
                 </main>
