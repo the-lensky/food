@@ -10,7 +10,7 @@ function Header() {
                 <ul id='nav-mobile' className='right'>
                     <li>
                         <a
-                            href='https://the-lensky.github.io/food/'
+                            href='https://github.com/the-lensky/food'
                             target='_blank'
                             rel="noreferrer">
                             Repo
