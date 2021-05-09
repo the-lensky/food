@@ -1,30 +1,28 @@
-import React, { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
-import { getFilteredCategory } from '../api'
-import MealList from './MealList'
+import React, {useState, useEffect} from 'react'
+import {useParams, useHistory} from 'react-router-dom'
+import {getFilteredCategory} from '../api'
 
-function Category(props) {
+import Preloader from '../components/Preloader'
+import MealsList from '../components/MealsList'
 
-    const [meals, setMeals] = useState([])
-
+function Category() {
     const {name} = useParams()
+    const [meals, setMeals] = useState([])
+    const {goBack} = useHistory()
 
     useEffect(() => {
         getFilteredCategory(name)
-            .then(((data) => {
-                setMeals(data.meals)
-            }) )
+            .then((data) => setMeals(data.meals))
     }, [name])
 
     return (
         <>
-            {
-                !meals.length
-                    ? <Prelaoder/>
-                    : <MealList meals={meals}/>
-            }
+            <button className='btn' onClick={goBack}>
+                Go Back
+            </button>
+            {!meals.length ? <Preloader/> : <MealsList meals={meals}/>}
         </>
     )
 }
 
-export default Categoty
+export default Category

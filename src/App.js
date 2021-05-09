@@ -7,8 +7,9 @@ import Footer from './components/Footer'
 import Home from './pages/Home'
 import Contact from './pages/Contact'
 import About from './pages/About'
-import Category from './pages/About'
+import Category from './pages/Category'
 import NotFound from './pages/NotFound'
+import Recipe from './pages/Recipe'
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
                         <Route path='/contact' component={Contact}/>
                         <Route path='/about' component={About}/>
                         <Route path='/category/:name' component={Category}/>
+                        <Route path='/meal/:id' component={Recipe}/>
                         <Route component={NotFound}/>
                     </Switch>
                 </main>
