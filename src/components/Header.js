@@ -7,12 +7,14 @@ function Header() {
                 <Link to='/' className='brand-logo'>
                     React Food
                 </Link>
-                <ul id='nav-mobile' className='right hide-on-med-and-down'>
+                <ul id='nav-mobile' className='right'>
                     <li>
-                        <Link to={`/about`}>About</Link>
-                    </li>
-                    <li>
-                        <Link to={`/contacts`}>Contacts</Link>
+                        <a
+                            href='https://the-lensky.github.io/food/'
+                            target='_blank'
+                            rel="noreferrer">
+                            Repo
+                        </a>
                     </li>
                 </ul>
             </div>

@@ -70,7 +70,7 @@ function Recipe() {
                     ) : null}
                 </div>
             )}
-            <div className='center'>
+            <div className='center' style={{paddingTop: '1rem'}}>
                 <button className='btn green' onClick={goBack}>
                     Go Back
                 </button>
