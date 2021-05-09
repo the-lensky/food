@@ -1,23 +1,23 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 function Meal(props) {
-
-    const {strMeal, strMealThumb, idMeal} = props
+    const {strMeal, idMeal, strMealThumb} = props
 
     return (
-        <div className="card">
-            <div className="card-image">
+        <div className='card'>
+            <div className='card-image'>
                 <img src={strMealThumb} alt={strMeal}/>
             </div>
-            <div className="card-content">
-                <span className="card-title">{strMeal}</span>
+            <div className='card-content'>
+                <span className='card-title'>{strMeal}</span>
             </div>
             <div className='card-action'>
-                <Link to={`/category/${strMeal}`} className='btn green'> Watch recipe</Link>
+                <Link to={`/meal/${idMeal}`} className='btn green'>
+                    Watch recipe
+                </Link>
             </div>
         </div>
     )
 }
 
-export default Meal
+export {Meal}

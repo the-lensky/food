@@ -1,9 +1,5 @@
-import React from 'react'
-
-function About(props) {
-    return (
-        <div></div>
-    )
+function About() {
+    return <h1>Hello, from About page</h1>
 }
 
-export default About
+export {About}

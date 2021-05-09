@@ -1,18 +1,23 @@
+import {Link} from 'react-router-dom'
 
-import { Link } from 'react-router-dom'
-
-const Header = () => {
+function Header() {
     return (
-        <nav className='green'>
-            <div className="nav-wrapper">
-                <Link to="/" className="brand-logo">REACT MOVIES</Link>
-                <ul id="nav-mobile" className="right hide-on-med-and-down">
-                    <li><Link to="/contact">CONTACT</Link></li>
-                    <li><Link to="/about">ABOUT</Link></li>
+        <nav className='green darken-1'>
+            <div className='nav-wrapper'>
+                <Link to='/' className='brand-logo'>
+                    React Food
+                </Link>
+                <ul id='nav-mobile' className='right hide-on-med-and-down'>
+                    <li>
+                        <Link to={`/about`}>About</Link>
+                    </li>
+                    <li>
+                        <Link to={`/contacts`}>Contacts</Link>
+                    </li>
                 </ul>
             </div>
         </nav>
     )
 }
 
-export default Header
+export {Header}

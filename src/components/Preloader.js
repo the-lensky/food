@@ -1,11 +1,9 @@
-import React from 'react'
-
-const Preloader = () => {
+function Preloader() {
     return (
-        <div className="progress green preloader">
-            <div className="indeterminate green lighten-3"></div>
+        <div className='progress'>
+            <div className='indeterminate'></div>
         </div>
     )
 }
 
-export default Preloader
+export {Preloader}

@@ -1,4 +1,4 @@
-import { API_URL } from './config'
+import {API_URL} from './config'
 
 const getMealById = async (mealId) => {
     const response = await fetch(API_URL + 'lookup.php?i=' + mealId)
@@ -15,4 +15,4 @@ const getFilteredCategory = async (catName) => {
     return await response.json()
 }
 
-export { getMealById, getAllCategories, getFilteredCategory }
+export {getMealById, getAllCategories, getFilteredCategory}
